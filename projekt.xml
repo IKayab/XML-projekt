@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hurtownia>
+	
+	
+	
+		<pracownicy>
+			<pracownik>
+				<imie>Jan</imie>
+				<nazwisko>Nowak</nazwisko>
+				<stanowisko>kierownik</stanowisko>
+				<id>80abe</id>
+			
+			</pracownik>
+			
+			<pracownik>
+				<imie>Anna</imie>
+				<nazwisko>Nowak</nazwisko>
+				<stanowisko>kierownik</stanowisko>
+				<id>81bdj</id>
+			</pracownik>
+			
+			<pracownik>
+				<imie>Michał</imie>
+				<nazwisko>Kowalski</nazwisko>
+				<stanowisko>kierownik</stanowisko>
+				<id>88jcg</id>
+			</pracownik>
+			
+			<pracownik>
+				<imie>Janusz</imie>
+				<nazwisko>Jankowski</nazwisko>
+				<stanowisko>magazynier</stanowisko>
+				<id>76tbb</id>
+			</pracownik>
+			
+			<pracownik>
+				<imie>Alina</imie>
+				<nazwisko>Lewandowska</nazwisko>
+				<stanowisko>magazynier</stanowisko>
+				<id>71mnu</id>
+			</pracownik>
+			
+			<pracownik>
+				<imie>Krzysztof</imie>
+				<nazwisko>Zawada</nazwisko>
+				<stanowisko>magazynier</stanowisko>
+				<id>74iii</id>
+			</pracownik>	
+		</pracownicy>
+	
+	
+	
+		<dzialy>
+			<dzial idKierownika="81bdj">
+				<nazwa>Makijaż</nazwa>
+				<id>440</id>
+				<pojemnosc jednostka="półka">320</pojemnosc>
+			</dzial>
+			
+			<dzial idKierownika="88jcg">
+				<nazwa>Higiena</nazwa>
+				<id>220</id>
+				<pojemnosc jednostka="półka">480</pojemnosc>
+			</dzial>
+			
+			<dzial idKierownika="80abe">
+				<nazwa>Perfumy</nazwa>
+				<id>770</id>
+				<pojemnosc jednostka="półka">150</pojemnosc>
+			</dzial>
+		</dzialy>
+	
+	
+	
+	<produkty>
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+		<produkt idDzialu="">
+			<nazwa></nazwa>
+			<rodzaj></rodzaj>
+			<marka></marka>
+			<opakowanie>
+				<typ></typ>
+				<material></material>
+				<wielkosc jednostka=""></wielkosc>
+			</opakowanie>
+		</produkt>
+		
+	</produkty>
+
+</hurtownia>
