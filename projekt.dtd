@@ -1,0 +1,39 @@
+<!ENTITY % dane_personalne "imie, nazwisko, stanowisko">
+
+<!ELEMENT hurtownia  (pracownicy,dzialy, produkty)>
+<!ELEMENT pracownicy  (pracownik+)>
+<!ELEMENT pracownik  (%dane_personalne)>
+
+<!ELEMENT imie     (#PCDATA)>
+<!ELEMENT nazwisko     (#PCDATA)>
+<!ELEMENT stanowisko  (#PCDATA)>
+<!ATTLIST pracownik idpracownika IDREF #REQUIRED>
+
+--------------------------------------------------------------
+<!ELEMENT dzialy  (dzial+)>
+<!ELEMENT dzial     (nazwa,pojemnosc)>
+
+<!ELEMENT nazwa     (#PCDATA)>
+<!ELEMENT pojemnosc     (#PCDATA)>
+<!ATTLIST dzial idpracownika ID #REQUIRED>
+<!ATTLIST dzial iddzialu IDREF #REQUIRED>
+<!ATTLIST pojemnosc jednostka CDATA #REQUIRED>
+
+--------------------------------------------------------------
+<!ELEMENT produkty  (produkt+)>
+<!ELEMENT produkt  (nazwa+,rodzaj,marka,opakowanie)>
+
+<!ELEMENT nazwa     (#PCDATA)>
+<!ELEMENT rodzaj     (#PCDATA)>
+<!ELEMENT marka  (#PCDATA)>
+<!ELEMENT opakowanie  (typ,material+,wielkosc+)>
+<!ELEMENT typ     (#PCDATA)>
+<!ELEMENT material     (#PCDATA)>
+<!ELEMENT wielkosc  (#PCDATA)>
+<!ATTLIST produkt iddzialu ID #REQUIRED>
+<!ATTLIST wielkosc jednostka (g|ml) #REQUIRED>
+
+
+
+
+
