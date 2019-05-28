@@ -21,12 +21,13 @@
 
 --------------------------------------------------------------
 <!ELEMENT produkty  (produkt+)>
-<!ELEMENT produkt  (nazwa+,rodzaj,marka,opakowanie)>
+<!ELEMENT produkt  (marka,rodzaj,nazwa,cena,opakowanie*)>
 
-<!ELEMENT nazwa     (#PCDATA)>
+<!ELEMENT marka     (#PCDATA)>
 <!ELEMENT rodzaj     (#PCDATA)>
-<!ELEMENT marka  (#PCDATA)>
-<!ELEMENT opakowanie  (typ,material+,wielkosc+)>
+<!ELEMENT nazwa  (#PCDATA)>
+<!ELEMENT cena  (#PCDATA)>
+<!ELEMENT opakowanie  (typ,material+,wielkosc)>
 <!ELEMENT typ     (#PCDATA)>
 <!ELEMENT material     (#PCDATA)>
 <!ELEMENT wielkosc  (#PCDATA)>
