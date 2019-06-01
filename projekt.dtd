@@ -9,7 +9,7 @@
 <!ELEMENT stanowisko  (#PCDATA)>
 <!ATTLIST pracownik idpracownika IDREF #REQUIRED>
 
---------------------------------------------------------------
+<!---------------------------------------------------------------------------->
 <!ELEMENT dzialy  (dzial+)>
 <!ELEMENT dzial     (nazwa,pojemnosc)>
 
@@ -19,7 +19,7 @@
 <!ATTLIST dzial iddzialu IDREF #REQUIRED>
 <!ATTLIST pojemnosc jednostka CDATA #REQUIRED>
 
---------------------------------------------------------------
+<!---------------------------------------------------------------------------->
 <!ELEMENT produkty  (produkt+)>
 <!ELEMENT produkt  (marka,rodzaj,nazwa,cena,opakowanie*)>
 
