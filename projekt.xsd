@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	
+<xsd:simpleType name="imienazwiskotype">
+  <xsd:restriction base="xsd:string">
+	<xsd:minLength value="3"/>
+    <xsd:maxLength value="30"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:simpleType name="stanowiskotype">
+  <xsd:restriction base="xsd:string">
+	 <xsd:pattern value="kierownik|magazynier"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="atr1type">
+  <xsd:restriction base="xsd:string">
+	   <xsd:pattern value="([7-8][0-9][a-z][a-z][a-z]"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+<xsd:complexType name="pracowniktype">
+			<xsd:attribute name="idpracownika" type="atr1type"/>
+  <xsd:sequence>
+    <xsd:element name="imie" type="imienazwiskotype"/>
+    <xsd:element name="nazwisko" type="imienazwiskotype"/>
+    <xsd:element name="stanowisko" type="stanowiskotype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:complexType name="pracownicytype">
+  <xsd:sequence>
+    <xsd:element name="pracownicy" maxOccurs="unbounded" type="pracowniktype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+<xsd:element name="pracownicy" type="pracownicytype"/>
+
+<!-------------------------------------------------------------------------------------------->
+<xsd:simpleType name="nazwatype">
+  <xsd:restriction base="xsd:string">
+	<xsd:minLength value="2"/>
+    <xsd:maxLength value="50"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+
+<xsd:element name="pojemnosc">
+	  <xsd:complexType>
+      <xsd:sequence>
+		  
+	  </xsd:sequence>
+	  <xsd:attribute name="jednostka" type="xsd:string" default="półka"/>	
+
+
+
+
+
+	</xsd:schema>
+
