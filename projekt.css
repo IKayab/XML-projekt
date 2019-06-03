@@ -1,0 +1,86 @@
+hurtownia
+	{display:inline;
+	background-color: #36c9a4;
+	 width: 50%;
+	margin: 0 auto;
+	border: 3px #0004ff;
+	border-style: dotted;
+	padding: 10px 15px;
+	}
+pracownicy
+	{
+background-color: #daefee;
+display: block;
+float: left;
+margin: 0px 20px 20px 0px;
+ 
+	border: 2px solid black;
+	}
+
+pracownik
+	{display:block;
+	color:black;
+	background-color: #6ea6b2;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 15px;
+	border: 2px solid black;
+	}
+nazwisko
+	{font-weight: 700;
+	 color:  #0004ff;
+	}
+stanowisko
+	{display:block;
+	font-size: small;
+	font-family: Verdana, sans-serif;
+	
+	}
+	
+	
+dzialy
+	{
+background-color: #daefee;
+display: block;
+float: left;
+margin: 0px 20px 20px 0px;
+ 
+	border: 2px solid black;
+	}
+
+dzial
+	{display:block;
+	color:black;
+	background-color: #6ea6b2;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 15px;
+	border: 2px solid black;
+	}
+	
+	
+	produkty
+	{
+background-color: #daefee;
+display: block;
+float: right;
+margin: 0px 20px 20px 0px;
+ 
+	border: 2px solid black;
+	}
+
+produkt
+	{display:block;
+	color:black;
+	background-color: #6ea6b2;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 15px;
+	border: 2px solid black;
+	}
+	
+	opakowanie
+	{display:block;
+	color:black;
+	background-color: #6ea6b2;
+	margin: 5px 5px 5px 5px;
+	padding: 10px 15px;
+	border: 2px solid black;
+	}
