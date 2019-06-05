@@ -17,12 +17,11 @@
 
 <xsd:simpleType name="atr1type">
   <xsd:restriction base="xsd:string">
-	   <xsd:pattern value="([7-8][0-9][a-z][a-z][a-z]"/>
+	   <xsd:pattern value="([a-z][a-z][a-z])"/>
     </xsd:restriction>
 </xsd:simpleType>
 
-<xsd:complexType name="pracowniktype">
-			<xsd:attribute name="idpracownika" type="atr1type"/>
+<xsd:complexType name="pracownik1type">
   <xsd:sequence>
     <xsd:element name="imie" type="imienazwiskotype"/>
     <xsd:element name="nazwisko" type="imienazwiskotype"/>
@@ -30,16 +29,29 @@
   </xsd:sequence>
 </xsd:complexType>
 
+<xsd:complexType name="pracowniktype">
+	<xsd:complexContent>
+		<xsd:extension base="pracownik1type">
+			<xsd:attribute name="idpracownik" type="atr1type"/>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+
 <xsd:complexType name="pracownicytype">
   <xsd:sequence>
-    <xsd:element name="pracownicy" maxOccurs="unbounded" type="pracowniktype"/>
+    <xsd:element name="pracownik" maxOccurs="unbounded" type="pracowniktype"/>
   </xsd:sequence>
 </xsd:complexType>
 
-<xsd:element name="pracownicy" type="pracownicytype"/>
 
-<!-------------------------------------------------------------------------------------------->
-<xsd:simpleType name="nazwatype">
+
+
+
+
+
+
+<xsd:simpleType name="nazwadtype">
   <xsd:restriction base="xsd:string">
 	<xsd:minLength value="2"/>
     <xsd:maxLength value="50"/>
@@ -47,17 +59,197 @@
 </xsd:simpleType>
 
 
-
-<xsd:element name="pojemnosc">
-	  <xsd:complexType>
-      <xsd:sequence>
-		  
-	  </xsd:sequence>
-	  <xsd:attribute name="jednostka" type="xsd:string" default="półka"/>	
-
+<xsd:simpleType name="pojemnosc1type">
+  <xsd:restriction base="xsd:nonNegativeInteger">
+      <xsd:minInclusive value="0"/>
+      <xsd:maxInclusive value="10000"/>
+      </xsd:restriction>
+</xsd:simpleType>
 
 
+<xsd:simpleType name="atrjtype">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
 
+
+
+<xsd:complexType name="pojemnosctype">
+	<xsd:simpleContent>
+		<xsd:extension base="pojemnosc1type">
+			<xsd:attribute name="jednostkam" type="atrjtype" default="półka"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+
+<xsd:complexType name="dzial1type">
+  <xsd:sequence>
+    <xsd:element name="nazwad" type="nazwadtype"/>
+    <xsd:element name="pojemnosc" type="pojemnosctype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="dzialtype">
+	<xsd:complexContent>
+		<xsd:extension base="dzial1type">
+			<xsd:attribute name="idpracownika" type="atr1type"/>
+			<xsd:attribute name="iddzialu" type="atr1type"/>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+
+<xsd:complexType name="dzialytype">
+  <xsd:sequence>
+    <xsd:element name="dzial" maxOccurs="unbounded" type="dzialtype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+
+
+
+
+
+
+<xsd:simpleType name="typtype">
+  <xsd:restriction base="xsd:string">
+	<xsd:minLength value="3"/>
+    <xsd:maxLength value="30"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="materialtype">
+  <xsd:restriction base="xsd:string">
+	<xsd:minLength value="3"/>
+    <xsd:maxLength value="30"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="jednostkatype">
+  <xsd:restriction base="xsd:string">
+	<xsd:minLength value="1"/>
+    <xsd:maxLength value="5"/>
+    </xsd:restriction>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="wielkosc1type">
+  <xsd:restriction base="xsd:nonNegativeInteger">
+      <xsd:minExclusive value="0"/>
+      <xsd:maxInclusive value="20000"/>
+      </xsd:restriction>
+</xsd:simpleType>
+
+
+
+
+<xsd:complexType name="wielkosctype">
+	<xsd:simpleContent>
+		<xsd:extension base="wielkosc1type">
+			<xsd:attribute name="jednostka" type="jednostkatype"/>
+		</xsd:extension>
+	</xsd:simpleContent>
+</xsd:complexType>
+
+
+<xsd:complexType name="opakowanietype">
+  <xsd:sequence>
+    <xsd:element name="typ" type="typtype"/>
+    <xsd:element name="material" type="materialtype"/>
+    <xsd:element name="wielkosc" type="wielkosctype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:simpleType name="markatype">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="rodzajtype">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="nazwatype">
+  <xsd:restriction base="xsd:string"/>
+</xsd:simpleType>
+
+
+<xsd:simpleType name="cenatype">
+  <xsd:restriction base="xsd:decimal"/>
+</xsd:simpleType>
+
+
+<xsd:complexType name="produkt1type">
+  <xsd:sequence>
+    <xsd:element name="marka" type="markatype"/>
+    <xsd:element name="rodzaj" type="rodzajtype"/>
+    <xsd:element name="nazwa" type="nazwatype"/>
+    <xsd:element name="cena" type="cenatype"/>
+    <xsd:element name="opakowanie" type="opakowanietype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:complexType name="produkttype">
+	<xsd:complexContent>
+		<xsd:extension base="produkt1type">
+			<xsd:attribute name="idDzialu" type="atr1type"/>
+		</xsd:extension>
+	</xsd:complexContent>
+</xsd:complexType>
+
+
+<xsd:complexType name="produktytype">
+  <xsd:sequence>
+    <xsd:element name="produkt" maxOccurs="unbounded" type="produkttype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+
+
+
+
+
+
+
+<xsd:complexType name="hurtowniatype">
+  <xsd:sequence>
+    <xsd:element name="pracownicy" type="pracownicytype"/>
+    <xsd:element name="dzialy" type="dzialytype"/>
+    <xsd:element name="produkty" type="produktytype"/>
+  </xsd:sequence>
+</xsd:complexType>
+
+
+<xsd:element name="hurtownia" type="hurtowniatype">
+
+					<xsd:key name="kluczid1">
+						<xsd:selector xpath="dzialy/dzial" />
+						<xsd:field xpath="@iddzialu" />
+					</xsd:key>
+					<xsd:keyref name="nazwa1" refer="kluczid1">
+						<xsd:selector xpath="produkty/produkt"/>
+						<xsd:field xpath="@idDzialu"/>
+						</xsd:keyref>
+					
+					
+					
+					<xsd:key name="kluczid2">
+						<xsd:selector xpath="dzialy/dzial" />
+						<xsd:field xpath="@idpracownika" />
+					</xsd:key>
+					<xsd:keyref name="nazwa2" refer="kluczid1">
+						<xsd:selector xpath="pracowniky/pracownik"/>
+						<xsd:field xpath="@idpracownik"/>
+						</xsd:keyref>
+					</xsd:element>
 
 	</xsd:schema>
 
