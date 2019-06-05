@@ -1,4 +1,3 @@
-
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/css" href="hurtownia.css" ?>
 <!DOCTYPE hurtownia SYSTEM "hurtownia.dtd">
@@ -47,17 +46,17 @@
 		<dzialy>
 			<dzial idpracownika="bdj" iddzialu="mak">
 				<nazwad>Makijaż</nazwad>
-				<pojemnosc jednostka="półka">320</pojemnosc>
+				<pojemnosc jednostkam="półka">320</pojemnosc>
 			</dzial>
 			
 			<dzial idpracownika="jcg" iddzialu="hig">
 				<nazwad>Higiena</nazwad>
-				<pojemnosc jednostka="półka">480</pojemnosc>
+				<pojemnosc jednostkam="półka">480</pojemnosc>
 			</dzial>
 			
 			<dzial idpracownika="abe" iddzialu="per">
 				<nazwad>Perfumy</nazwad>
-				<pojemnosc jednostka="półka">150</pojemnosc>
+				<pojemnosc jednostkam="półka">150</pojemnosc>
 			</dzial>
 		</dzialy>
 	
@@ -118,7 +117,7 @@
 			<nazwa>Domowy ogródek, bakłażan</nazwa>
 			<cena>7.2</cena>
 			<opakowanie>
-				<typ></typ>
+				<typ>pakunek</typ>
 				<material>papier</material>
 				<wielkosc jednostka="g">100</wielkosc>
 			</opakowanie>
@@ -129,6 +128,11 @@
 			<rodzaj>Kredka do ust</rodzaj>
 			<nazwa>Lip Define Pencil</nazwa>
 			<cena>8.1</cena>
+			<opakowanie>
+				<typ>pudełko</typ>
+				<material>karton</material>
+				<wielkosc jednostka="g">20</wielkosc>
+			</opakowanie>
 		</produkt>
 		
 		
